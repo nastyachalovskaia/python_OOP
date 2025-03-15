@@ -1,10 +1,8 @@
 from accounts.bank_account import BankAccount
-from dataclasses import dataclass
 
 
-@dataclass
 class CheckingAccount(BankAccount):
 
-    def withdraw(self, amount):
+    def withdraw(self, amount: float) -> float:
         self._balance -= amount
         return self._balance
